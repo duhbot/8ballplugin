@@ -8,7 +8,7 @@ import org.pircbotx.Colors;
 
 import org.duh102.duhbot.functions.*;
 
-public class EightBallPlugin extends ListenerAdapter implements DuhbotFunction
+public class EightBallPlugin extends ListenerAdapter implements ListeningPlugin
 {
   static String responses[] = {
     "It is certain.",
@@ -47,9 +47,9 @@ public class EightBallPlugin extends ListenerAdapter implements DuhbotFunction
     }
   }
   
-  public HashMap<String,String> getHelpFunctions()
+  public Map<String,String> getHelpFunctions()
   {
-    HashMap<String,String> helpFunctions = new HashMap<String,String>();
+    Map<String,String> helpFunctions = new HashMap<String,String>();
     helpFunctions.put(".8ball", "Responds with a yes/no/maybe answer, of varying certainty");
     return helpFunctions;
   }
